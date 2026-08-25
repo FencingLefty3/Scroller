@@ -114,9 +114,8 @@
 
         const card = document.createElement('div');
             card.className = 'card';
-            card.innerHTML = `<div data="${cardNumber}" class="card">
-            <img src="https://picsum.photos/seed/${cardNumber}/900/1600" alt="Random Image2"> 
-        </div>`;
+            card.dataset.img  = cardNumber
+            card.innerHTML = `<img src="https://picsum.photos/seed/${cardNumber}/900/1600" alt="Random Image2">`;
         feed.appendChild(card);
     }
     generateCard()
