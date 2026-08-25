@@ -93,10 +93,10 @@
 <body>
     <main id="Feed">
         <div class="card">
-            <img src="https://www.picsum.photos/900/1600" alt="Random Image"> 
+            <img src="https://www.picsum.photos/seed/1/900/1600" alt="Random Image"> 
         </div>
         <div class="card">
-            <img src="https://picsum.photos/900/1600" alt="Random Image2"> 
+            <img src="https://picsum.photos/seed/2/900/1600" alt="Random Image2"> 
         </div>
     </main>
     
@@ -108,13 +108,17 @@
     const feed = document.getElementById("Feed")
     const loadMore = document.getElementById("loadMore")
 
+    let cardNumber = 2
+
     function generateCard() {
+        cardNumber += 1
+
         const numb = Math.round(Math.random())
 
         const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `<div class="card">
-            <img src="https://picsum.photos/900/1600" alt="Random Image2"> 
+            <img src="https://picsum.photos/seed/${cardNumber}/900/1600" alt="Random Image2"> 
         </div>`;
         feed.appendChild(card);
     }
